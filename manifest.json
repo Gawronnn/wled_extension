@@ -6,7 +6,8 @@
   "permissions": [
     "activeTab",
     "http://ledy.local/*",
-    "file:///*"
+    "file:///*",
+    "tabs"
   ],
 
   "browser_action": {

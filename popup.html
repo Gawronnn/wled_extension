@@ -5,13 +5,33 @@
   </head>
   <body>
     <style>
-      body{background-color:rgb(66, 66, 66);
+      body{
+           background-color:rgb(66, 66, 66);
            min-width: 300px;
            min-height: 300px;
+           text-align: center;
           }
-      h1{color:white}
+      h1{
+         color:white
+        }
+      .powerButton{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+      }
+      .openButton{
+        margin-top: 20px;
+      }
+      .slider{
+        margin-top: 20px;
+      }
     </style>
     <h1>LED Control</h1>
-    <button id="myButton">Toggle LEDs</button>
+    <img src="power-button.png" alt="powerButton" id="powerButton" class="powerButton">
+    <button id="openButton" class="openButton">Open WLED control panel</button>
+    <div class="slideContainer">
+      <input type="range" min="0" max="255" value="100" class="slider" id="brightnessSlider">
+    </div>
   </body>
 </html>
