@@ -4,7 +4,7 @@
   "version": "1.0",
   "description": "WLED chrome extension",
   "host_permissions": [
-    "http://ledy.local/*",
+    "http://*/*",
     "file:///*"
   ],
   "action": {
