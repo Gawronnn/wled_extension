@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "LED Plugin",
+  "name": "WLED extension",
   "version": "1.0",
-  "description": "Włączanie LED za pomocą API WLED",
+  "description": "WLED chrome extension",
   "host_permissions": [
     "http://ledy.local/*",
     "file:///*"
