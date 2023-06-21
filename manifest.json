@@ -1,17 +1,13 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "LED Plugin",
   "version": "1.0",
   "description": "Włączanie LED za pomocą API WLED",
-  "permissions": [
-    "activeTab",
+  "host_permissions": [
     "http://ledy.local/*",
-    "file:///*",
-    "tabs"
+    "file:///*"
   ],
-
-  "browser_action": {
-    "default_title": "WLED LED Control",
+  "action": {
     "default_popup": "popup.html",
     "default_icon": {
       "512": "icon.png"
@@ -19,5 +15,9 @@
   },
   "icons": {
     "512": "icon.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'",
+    "sandbox": "sandbox allow-scripts allow-modals"
   }
 }
