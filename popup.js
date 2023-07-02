@@ -22,4 +22,31 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
   });
+
+
+  var request = new XMLHttpRequest();
+  var url = "http://ledy.local/win&=ac";
   
+  function fetchAndSetSliderValue() {
+
+    request.onload = function() {
+      if (request.status === 200) {
+        var xmlResponse = request.responseText;
+  
+        var parser = new DOMParser();
+        var xmlDoc = parser.parseFromString(xmlResponse, "text/xml");
+  
+        var valueElement = xmlDoc.getElementsByTagName("ac")[0];
+        var value = valueElement.textContent;
+  
+        var brightnessSlider = document.getElementById("brightnessSlider");
+        brightnessSlider.value = value;
+    }
+  };
+  
+    request.open("GET", url, true);
+    request.send();
+}
+  fetchAndSetSliderValue();
+  
+setInterval(fetchAndSetSliderValue, 2500);
