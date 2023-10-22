@@ -2,40 +2,16 @@
   <head>
     <title>LED Control</title>
     <script src="popup.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <style>
-      body{
-           background-color:rgb(66, 66, 66);
-           min-width: 300px;
-           min-height: 300px;
-           text-align: center;
-          }
-      h1{
-         color:white
-        }
-      .powerButton{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 30%;
-      }
-      .openButton{
-        margin-top: 40px;
-      }
-      .slideContainer{
-        margin-top: 40px;
-      }
-      p{
-        color: white;
-      }
-    </style>
     <h1>LED Control</h1>
-    <img src="power-button.png" alt="powerButton" id="powerButton" class="powerButton">
-    <button id="openButton" class="openButton">Control panel</button>
+    <img src="power-button.png" alt="powerButton" id="powerButton" />
+    <button id="openButton">Control panel</button>
     <div class="slideContainer">
       <p>Brightness</p>
-      <input type="range" min="0" max="255" class="slider" id="brightnessSlider">
+      <input type="range" min="0" max="255" id="brightnessSlider" /><br />
+      <p id="brightness">0%</p>
     </div>
   </body>
 </html>
